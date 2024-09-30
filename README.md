@@ -4,6 +4,9 @@
 
 This is a mobile e-commerce application built using Flutter. It showcases products by categories and includes essential features like product details, a shopping cart, user profile, and a favorites list.
 
+
+<img src="https://github.com/tliliAbdelmonem/Store-Shop/blob/main/assets/preview/preview.jpg" />
+
 ## Features
 
 1. **Home Page**:
@@ -56,5 +59,20 @@ The following Flutter packages are used in this project:
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/yourrepository.git
+
+```
+git clone https://github.com/tliliAbdelmonem/Store-Shop.git
+cd Store-Shop
+
+```
+
+2. Install dependencies:
+
+```
+flutter pub get
+
+```
+3. Run the application:
+
+```
+flutter run
