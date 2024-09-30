@@ -273,8 +273,15 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                     const SizedBox(
                                       width: 4,
                                     ),
-                                    Text(
-                                        'Vous avez ajouté ${product.name} à votre panier.'),
+                                    SizedBox(
+                                      width: 250,
+                                      child: Text(
+                                        'Vous avez ajouté ${product.name} à votre panier.',
+                                        overflow: TextOverflow.ellipsis,
+                                        softWrap: true,
+                                        maxLines: 2,
+                                      ),
+                                    ),
                                   ],
                                 ),
                               );
