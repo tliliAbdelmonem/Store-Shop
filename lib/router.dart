@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:store_shop/pages/favorite/favorite_page.dart';
+import 'package:store_shop/pages/profile/profile_page.dart';
 import '/pages/cart/cart_page.dart';
 import '/pages/main/main_page.dart';
 import '/pages/product-details/product_details_page.dart';
@@ -26,6 +28,20 @@ GoRouter appRouter() {
             name: 'cart',
             builder: (BuildContext context, GoRouterState state) {
               return const CartPage();
+            },
+          ),
+          GoRoute(
+            path: 'profile',
+            name: 'profile',
+            builder: (BuildContext context, GoRouterState state) {
+              return const ProfilePage();
+            },
+          ),
+          GoRoute(
+            path: 'favorite',
+            name: 'favorite',
+            builder: (BuildContext context, GoRouterState state) {
+              return const FavoritePage();
             },
           ),
         ],

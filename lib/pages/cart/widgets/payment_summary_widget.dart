@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '/constants.dart';
+import '/providers/cart_provider.dart';
+import '/utils/calculate_tax.dart';
+import '/utils/calculate_total_to_payed.dart';
 
 class PaymentSummaryWidget extends StatefulWidget {
   const PaymentSummaryWidget({super.key});
@@ -32,25 +37,25 @@ class _PaymentSummaryWidgetState extends State<PaymentSummaryWidget> {
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width - 40,
-                  child: const Column(
+                  child: Column(
                     children: [
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Prix total',
                             style: TextStyle(color: Colors.black54),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Text(
-                            "\$556",
-                            style: TextStyle(fontWeight: FontWeight.w400),
+                            "\$${context.watch<CartProvider>().totalPrice}",
+                            style: const TextStyle(fontWeight: FontWeight.w400),
                           ),
                         ],
                       ),
                       const SizedBox(
                         height: 4,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Text(
                             'Frais de livraison',
@@ -58,7 +63,7 @@ class _PaymentSummaryWidgetState extends State<PaymentSummaryWidget> {
                           ),
                           Spacer(),
                           Text(
-                            "\$556",
+                            "\$$deliveryCosts",
                             style: TextStyle(fontWeight: FontWeight.w400),
                           ),
                         ],
@@ -68,30 +73,30 @@ class _PaymentSummaryWidgetState extends State<PaymentSummaryWidget> {
                       ),
                       Row(
                         children: [
-                          Text(
-                            'Tax (19%)',
+                          const Text(
+                            'Tax ($taxPercentage%)',
                             style: TextStyle(color: Colors.black54),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Text(
-                            "\$556",
-                            style: TextStyle(fontWeight: FontWeight.w400),
+                            "\$${calculateTax(context.watch<CartProvider>().totalPrice)}",
+                            style: const TextStyle(fontWeight: FontWeight.w400),
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Total à payer',
                             style: TextStyle(fontWeight: FontWeight.w900),
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Text(
-                            "\$556",
-                            style: TextStyle(fontWeight: FontWeight.w900),
+                            "\$${calculateTotalToPayed(context.watch<CartProvider>().totalPrice)}",
+                            style: const TextStyle(fontWeight: FontWeight.w900),
                           ),
                         ],
                       ),

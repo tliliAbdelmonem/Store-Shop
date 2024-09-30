@@ -208,4 +208,51 @@ List<ProductModel> products = [
       price: 223,
       rate: 3.4,
       photo: "woman-567.png"),
+
+  //Garçon
+
+  const ProductModel(
+      id: 17,
+      ref: "0017",
+      name: "Chemise",
+      description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices ultrices ante, ut bibendum magna fermentum sit amet.",
+      categoryIds: [
+        1,
+        5,
+      ],
+      colors: ["#3366FF", "#22B858", "#DB9D28"],
+      price: 163,
+      rate: 3.4,
+      photo: "full-shot-back-back-modern-boys.png"),
+
+  const ProductModel(
+      id: 18,
+      ref: "0018",
+      name: "Jean",
+      description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices ultrices ante, ut bibendum magna fermentum sit amet.",
+      categoryIds: [
+        1,
+        5,
+      ],
+      colors: ["#3366FF", "#22B858", "#DB9D28"],
+      price: 103,
+      rate: 3.4,
+      photo: "teenage-boy-his-younger-brother.png"),
+
+  const ProductModel(
+      id: 19,
+      ref: "0019",
+      name: "Costume",
+      description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices ultrices ante, ut bibendum magna fermentum sit amet.",
+      categoryIds: [
+        1,
+        5,
+      ],
+      colors: ["#3366FF", "#22B858", "#DB9D28"],
+      price: 99,
+      rate: 3.4,
+      photo: "teenage-boy-his-younger-brother-2.png"),
 ];

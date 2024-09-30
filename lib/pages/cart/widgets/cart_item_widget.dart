@@ -174,7 +174,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                       ),
                     ),
                     Text(
-                      "\$${cart.product.price}",
+                      "\$${cart.product.price * cart.quantity}",
                       style: Theme.of(context)
                           .textTheme
                           .bodyLarge

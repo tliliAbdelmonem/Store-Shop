@@ -18,8 +18,8 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   static const List<String> _routes = [
     '/',
     '/cart',
-    '/',
-    '/',
+    '/favorite',
+    '/profile',
   ];
 
   void _onItemTapped(int index) {
