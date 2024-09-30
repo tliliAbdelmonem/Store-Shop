@@ -5,7 +5,7 @@
 This is a mobile e-commerce application built using Flutter. It showcases products by categories and includes essential features like product details, a shopping cart, user profile, and a favorites list.
 
 
-<img src="https://github.com/tliliAbdelmonem/Store-Shop/blob/main/assets/preview/preview.jpg" />
+<img src="https://github.com/tliliAbdelmonem/Store-Shop/blob/main/assets/preview/preview-app.jpg" />
 
 ## Features
 
